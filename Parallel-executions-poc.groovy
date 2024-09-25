@@ -39,7 +39,8 @@ pipeline {
                         sleep 2 // Simulating task duration
                         echo 'Task 3 completed.'
                     }
-
+                    echo "checking the value of map"
+                    echo "${tasks}"
                     // Execute all tasks in parallel
                     parallel tasks
                 }
