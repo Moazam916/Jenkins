@@ -10,7 +10,7 @@ pipeline {
                     def random = new Random() // Create an instance of Random
 
                     // Define a function to generate a random sleep time in minutes
-                    def getRandomSleepTimeInMinutes() {
+                    def getRandomSleepTimeInMinutes() { ->
                         return random.nextInt(5) + 1 // Random sleep between 1 and 5 minutes
                     }
 
