@@ -1,3 +1,5 @@
+def my_map = [:] // intializing the new map
+def my_array = ["alpha","bravo","charlie"]
 pipeline {
     agent any
 
@@ -6,8 +8,6 @@ pipeline {
             steps {
                 script {
                     // Reading the JSON file
-                    def my_map = [:] // intializing the new map
-                    def my_array = ["alpha","bravo","charlie"]
                     def userInput = input(
                         id: 'userInput', message: 'Please provide your inputs', parameters: [
                             string(defaultValue: '', description: 'Enter a name', name: 'name'),
