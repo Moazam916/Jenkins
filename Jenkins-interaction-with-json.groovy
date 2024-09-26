@@ -27,6 +27,7 @@ pipeline {
                     echo "printing the type of json data: ${jsonData.getClass()}"
                     echo "printing the input json file: ${jsonData}"
                     jsonData.APP_info = my_map
+                    echo "printing my array: ${my_array}"
                     jsonData.Dummy_array << my_array
                     // Accessing JSON properties (assuming it's a key-value JSON)
                     // echo "Value of key 'name': ${jsonData.name}"
