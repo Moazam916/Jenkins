@@ -21,6 +21,7 @@ pipeline {
                     def maptojson = groovy.json.JsonOutput.toJson(jsonData)
                     // enabling pretty print on converted json
                     def prettyjson = groovy.json.JsonOutput.prettyPrint(maptojson)
+                    echo "the outputted json file: ${prettyjson}"
                 }
             }
         }
