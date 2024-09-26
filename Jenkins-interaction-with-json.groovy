@@ -26,9 +26,11 @@ pipeline {
                     def jsonData = jsonSlurper.parseText(jsonContent)
                     echo "printing the type of json data: ${jsonData.getClass()}"
                     echo "printing the input json file: ${jsonData}"
-                    jsonData.APP_info = my_map
+                    jsonData['APP_info'] = my_map // adding new map to json
                     echo "printing my array: ${my_array}"
-                    jsonData.Dummy_array << my_array
+                    jsonData['Dummy_array'] = my_array // adding new array to json
+                    // Optional: If appending to an existing list in the JSON
+                    // jsonData['existingListKey'] += newList
                     // Accessing JSON properties (assuming it's a key-value JSON)
                     // echo "Value of key 'name': ${jsonData.name}"
                     // echo "Value of key 'version': ${jsonData.version}"
