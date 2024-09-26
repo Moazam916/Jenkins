@@ -1,0 +1,8 @@
+{
+    "name": "my-app",
+    "version": "1.0.0",
+    "dependencies": {
+      "groovy": "2.4.12",
+      "jenkins": "2.235"
+    }
+}  
